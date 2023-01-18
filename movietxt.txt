@@ -1,0 +1,34 @@
+1. Normalizacja baz danych
+Normalizacja baz danych to proces, który polega na strukturyzacji bazodanowej,  dotyczy zwykle relacyjnych baz danych. Ma związek z wykorzystaniem tzw. postaci normalnych, których celem jest zmniejszenie nadmiarowości danych oraz wsparcie ich integralności.
+
+2. Na czym polega normalizacja baz danych?
+Proces ten pozwala projektować oraz organizować każdą kolumnę (atrybuty) oraz tabelę (relacje) konkretnej bazy. Celem rozbudowanych działań normalizacyjnych jest zapewnienie poprawnego wymuszania zależności pomiędzy nimi bez zbędnej redundancji.
+
+Po co stosować normalizację relacyjnych baz danych?
+Gromadzenie nadmiarowych danych przyczynia się do marnowania przestrzeni dyskowej oraz  obniżenia wydajności. Jeżeli zmieniamy dane w jednym miejscu, muszą one zostać zmienione również w innych lokalizacjach.
+
+3. Pierwsza postać normalna 1NF
+Najważniejsze czynniki określające zasadę działania tej reguły to:
+
+    - Usunięcie powtarzających się grup w ramach pojedynczych tabel.
+    - Tworzenie oddzielnej tabeli dla pojedynczego zestawu danych relacyjnych.
+    - Określenie każdego z zestawów dzięki kluczowi podstawowemu.
+
+4. Druga postać normalna 2NF
+
+Wprowadzenie drugiej formy normalnej ma na celu przede wszystkim:
+
+    - Budowę osobnych tabel dla zestawów wartości powiązanych z wieloma zapisami.
+    - Ustalenie relacji pomiędzy tabelami przy użyciu klucza obcego.
+
+5. Trzecia postać normalna 3NF
+Celem implementacji tej formy w swojej relacyjnej bazie danych jest:
+
+    Usunięcie pół, które nie zależą od klucza - jeżeli wartości zapisu nie stanowią części klucza rekordu, wówczas nie powinny się tam znajdować.
+
+Pierwsze trzy reguły (spośród jedenastu obecnie opracowanych) przydają się m.in. do rozwiązywania następujacych problemow:
+
+- wpływa negatywnie na przestrzeń dyskową oraz ją zaśmieca,
+- zmiana w wierszach występuje kilkukrotnie,
+- Kolumny zawierają niepotrzebne kolekcje wartości przez co ciężko jest wpisać w nie dane,
+- Przypadkowa utrata danych.
