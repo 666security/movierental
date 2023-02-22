@@ -1,0 +1,39 @@
+1. Normalizacja bazy danych
+
+Normalizacja bazy danych to proces polegający na strukturyzacji bazy danych, zwykle mający zastosowanie do relacyjnych baz danych. Wiąże się to ze stosowaniem tzw. formularzy normalnych, których celem jest ograniczenie redundancji danych i wspieranie ich integralności. (mniej opóźnień więcej miejsca na dane)
+
+2. Czym jest normalizacja bazy danych?
+
+Ten proces pozwala zaprojektować i zorganizować każdą kolumnę (atrybut) i tabelę (relację) określonej bazy danych. Celem szeroko zakrojonej działalności normalizacyjnej jest również zapewnienie prawidłowego egzekwowania zależności między nimi bez zbędnych redundancji.
+
+Dlaczego warto używać normalizacji relacyjnej bazy danych?
+
+Gromadzenie nadmiarowych danych może prowadzić do marnowania miejsca w pamięci masowej i problemów z wydajnością. Jeżeli zmieniamy dane w jednym miejscu, to w innym miejscu muszą one zostać zmienione w ten sam sposób.
+
+Pierwsza postać normalna 1NF
+
+Wśród najważniejszych czynników determinujących zasady działania tej zasady wymienić należy:
+
+- Usuń zduplikowane grupy w jednej tabeli.
+- Utwórz oddzielną tabelę dla zestawu danych relacyjnych.
+- Każda kolekcja jest identyfikowana przez swój klucz podstawowy.
+
+Druga postać normalna 2NF
+
+Wprowadzenie drugiej postaci normalnej dotyczy głównie:
+
+- Twórz osobne tabele dla zestawów wartości powiązanych z wieloma rekordami.
+- Ustal relacje między tabelami za pomocą kluczy obcych.
+
+Trzecia postać normalna 3NF
+
+Główne cele implementacji tego formularza w relacyjnej bazie danych to:
+
+- Usuń pola, które nie zależą od klucza - jeśli wartości rekordu nie są częścią klucza rekordu, nie powinno ich tam być.
+
+Pierwsze trzy zasady (spośród 11 obecnie opracowywanych) można wykorzystać do rozwiązania następujących problemów, w tym:
+
+- negatywnie wpływa i zaśmieca miejsce na dysku,
+- zmiana rzędu nastąpiła kilka razy,
+- kolumna zawiera zbędny zestaw wartości, utrudniający wprowadzanie do niej danych,
+- Nieoczekiwana utrata danych.

@@ -7,7 +7,7 @@
         <div class="glowny">
     <?php
         include "../includes/header.php";
-        $con = new mysqli("127.0.0.1","root","","movie");
+        $con = new mysqli("127.0.0.1","root","","projekt");
         echo '<form method="POST">';
         $res = $con->query("SELECT * FROM film");
         $cos = $res->fetch_all();
@@ -16,9 +16,9 @@
         <div class="details">Nazwa: <input name="nazwa" value=""><br>
         Typ: <input name="typ" value=""><br>
         Opis: <input name="opis" value=""><br>
-        foto </div>';
+        zdjecie </div>';
         echo '<input type="submit">';
-        echo '<br><a href="../index.php?page=1">Strona Glowna</a>';
+        echo '<br><a href="../index.php?page=1">Strona Główna</a>';
         echo '</form>';
 
         if($_POST!=NULL)
@@ -26,7 +26,7 @@
             print_r($_POST);
             if($_POST["nazwa"]!="" && $_POST["typ"]!="" && $_POST["opis"]!="")
             {
-                $sqlquery = "INSERT INTO `film` VALUES ('".count($cos1)."', '".$_POST['nazwa']."', '".$_POST['opis']."','".$_POST['typ']."');";
+                $sqlquery = "INSERT INTO `film`(name,description,type) VALUES ('".$_POST['nazwa']."', '".$_POST['opis']."','".$_POST['typ']."');";
                 $con->query($sqlquery);
                 header('location: ../index.php?page=1');
             }

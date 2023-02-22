@@ -7,7 +7,7 @@
         <div class="glowny">
     <?php
         include "../includes/header.php";
-        $con = new mysqli("127.0.0.1","root","","movie");
+        $con = new mysqli("127.0.0.1","root","","projekt");
         echo '<form method="POST">';
         $res = $con->query("SELECT * FROM user");
         $cos = $res->fetch_all();
@@ -23,12 +23,13 @@
                 {
                     $_SESSION["email"] = $_POST['email'];
                     $_SESSION["id"] = $i;
-                    echo 'zalogowany';
+                    $_SESSION["admin"]=0;
+                    echo 'udalo sie zalogowac';
                     header("Location: ../index.php?page=1");
                 }
             }
         }
-        echo '<section class="box"><input type="submit"></section><a href="register.php">Rejestracja</a><br><br><a href="../index.php?page=1">Strona Glowna</a>';
+        echo '<section class="box"><input type="submit"></section><a href="register.php">Rejestracja</a><br><br><a href="../index.php?page=1">Strona Główna</a>';
         echo '</form>';
     ?>
         </div>

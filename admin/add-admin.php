@@ -4,16 +4,16 @@
     </head>
     <body>
     <?php
-        $con = new mysqli("127.0.0.1","root","","movie");
+        $con = new mysqli("127.0.0.1","root","","projekt");
         echo '<form method="POST">';
         $res = $con->query("SELECT * FROM user");
         $cos = $res->fetch_all();
 
         echo '<center><div class="glowny"><h1>Rejestracja:</h1>
-        <section class="box"><br> Imie: <input name="imie"></section>
+        <section class="box"><br> Imię: <input name="imie"></section>
         <section class="box"><br> Nazwisko: <input name="nazwisko"></section>
         <section class="box"><br> Email: <input name="email"></section>
-        <section class="box"><br> Haslo: <input name="password" type="password"><br></section>';
+        <section class="box"><br> Hasło: <input name="password" type="password"><br></section>';
         if($_POST!=NULL)
         {
             if($_POST['email']!="" && $_POST['password']!="")
@@ -23,7 +23,7 @@
                 header('location: login.php');
             }
         }
-        echo '<section class="box"><br><input type="submit"></section><a href="login.php">Logowanie</a><br><br><a href="../index.php?page=1">Strona Glowna</a</div></center>';
+        echo '<section class="box"><br><input type="submit"></section><a href="login.php">Logowanie</a><br><br><a href="../index.php?page=1">Strona Główna</a</div></center>';
         echo '</form>';
     ?>
 

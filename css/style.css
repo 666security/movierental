@@ -8,15 +8,15 @@ body
     background: none;
     background-color: white;
     box-shadow: 2px black;
-    outline: 3px gray;
+    outline: 3px red;
 }
-.glownyduzy
+.glowny1
 {
     width: 80%;
     background: none;
     background-color: white;
     box-shadow: 2px black;
-    outline: 3px gray;
+    outline: 3px red;
 }
 input
 {
@@ -37,7 +37,7 @@ a
 }
 .blok
 {
-    outline: 2px black;
+    outline: 2px red;
     height: 200px;
     width: 80%;
 }

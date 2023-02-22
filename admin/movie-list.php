@@ -6,8 +6,8 @@
         <center>
     <?php
         include "../includes/header.php";
-        echo '<div class="glownyduzy"><h1>Wypozyczalnia Filmow</h1>';
-        $con = new mysqli("127.0.0.1","root","","movie");
+        echo '<div class="glowny1"><h1>Wypożyczalnia Filmów</h1>';
+        $con = new mysqli("127.0.0.1","root","","projekt");
         $res = $con->query("SELECT * FROM film");
         $cos = $res->fetch_all();
 

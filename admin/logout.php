@@ -9,6 +9,7 @@
             $_SESSION["email"]="";
             $_SESSION["password"]="";
             $_SESSION["id"]="";
+            $_SESSION["admin"]="";
             header("Location: login.php");
         ?>
     </body>

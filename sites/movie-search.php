@@ -10,18 +10,18 @@
         echo '<form method="POST">';
         if($_SESSION["email"])
         {
-            echo '<div class="glownyduzy"><h1>Wypozyczalnia Filmow</h1> Zalogowany Jako: '.$_SESSION["email"].'<br>';
+            echo '<div class="glowny1"><h1>Wypożyczalnia Filmów</h1> Zalogowany Jako: '.$_SESSION["email"].'<br>';
             echo '<div class="panel">
             <a href="logout.php">Wyloguj sie</a>';
         }else
         {
-            echo '<div class="glownyduzy"><h1>Wypozyczalnia Filmow</h1>';
+            echo '<div class="glowny1"><h1>Wypożyczalnia Filmów</h1>';
             echo '<div class="panel">
             <a href="login.php">Zaloguj sie</a>
             <a href="register.php">Zarejestruj sie</a>';
         }
-        echo '<a href="../index.php?page=1">Wyczysc</a> <input name="search"><input type="submit"></div>';
-        $con = new mysqli("127.0.0.1","root","","movie");
+        echo '<a href="../index.php?page=1">Wyczyść</a> <input name="search"><input type="submit"></div>';
+        $con = new mysqli("127.0.0.1","root","","projekt");
         $res = $con->query("SELECT * FROM film");
         $cos = $res->fetch_all();
 
@@ -31,13 +31,13 @@
         $offset=($_GET['page']-1)*10;
         $cos2 = $con->query("SELECT * FROM film LIMIT 10 OFFSET ".$offset."");
         $cos22 = $cos2->fetch_all();
-        echo 'filmy zawierajace "'.$_SESSION["search"].'"';
+        echo 'Wyszukuje wszystkie filmy zawierające "'.$_SESSION["search"].'"';
 
         for($i = 0; $i<count($cos22);$i++)
         {
             if($cos22[$i][1]==$_SESSION["search"] || $cos22[$i][2]==$_SESSION["search"] || $cos22[$i][3]==$_SESSION["search"])
             {
-                echo '<div class="blok"><div class="lewy">Nazwa: '.$cos22[$i][1].'<br>Typ: '.$cos22[$i][3].'<br> Opis: '.$cos22[$i][2].'<br></div><div class="prawy">foto</div><div class="lewydol"><a href="sites/movie-details.php?id='.$i.'">Szczegóły</a></div></div><br>';
+                echo '<div class="blok"><div class="lewy">Nazwa: '.$cos22[$i][1].'<br>Typ: '.$cos22[$i][3].'<br> Opis: '.$cos22[$i][2].'<br></div><div class="prawy">zdjecie</div><div class="lewydol"><a href="sites/movie-details.php?id='.$i.'">Szczegóły</a></div></div><br>';
             }
         }
         echo '<br><div class="dol">';
